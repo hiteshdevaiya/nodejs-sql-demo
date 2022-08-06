@@ -1,0 +1,264 @@
+{
+	"info": {
+		"_postman_id": "5da8d4f4-fb39-41f4-8ed6-52d2f1a87185",
+		"name": "nodejs-sql-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11445308"
+	},
+	"item": [
+		{
+			"name": "user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoidGVzdEBnbWFpbDE4LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjI2OTE3fQ.LHZa_XUMf1MJBXkuHLim9xND2xwoGVIdivrmeHwQb_k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/v1/user?sort_by=email.desc&page=1&limit=2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user"
+					],
+					"query": [
+						{
+							"key": "sort_by",
+							"value": "email.desc"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoidGVzdEBnbWFpbDE4LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjI2OTE3fQ.LHZa_XUMf1MJBXkuHLim9xND2xwoGVIdivrmeHwQb_k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"ff@gmail27.com\",\n    \"password\":\"123456\",\n    \"role\":\"user\",\n    \"name\":\"test ff\",\n    \"contact\":\"457677\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/create",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoidGVzdEBnbWFpbDE4LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjI2OTE3fQ.LHZa_XUMf1MJBXkuHLim9xND2xwoGVIdivrmeHwQb_k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/zlinux/Downloads/ultimate-property-issue-image/2.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/uploadimage",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"uploadimage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear authorization",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@gmail18.com\",\n    \"password\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoidGVzdEBnbWFpbDE4LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjI2OTE3fQ.LHZa_XUMf1MJBXkuHLim9xND2xwoGVIdivrmeHwQb_k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"testdsf@gmail27.com\",\n    \"name\":\"test 23\",\n    \"contact\":\"457677\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/19",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoidGVzdEBnbWFpbDE4LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjI2OTE3fQ.LHZa_XUMf1MJBXkuHLim9xND2xwoGVIdivrmeHwQb_k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/19",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImVtYWlsIjoidGVzdEBnbWFpbDE4LmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjU3NjI2OTE3fQ.LHZa_XUMf1MJBXkuHLim9xND2xwoGVIdivrmeHwQb_k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/user/21",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
